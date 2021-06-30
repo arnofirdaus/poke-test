@@ -49,8 +49,8 @@ function Home() {
 						)
 					}
 				</div>
-				{loading && <p>Loading...</p>}
-				{error && <p>Error!</p>}
+				{loading && <p className="loading">Loading...</p>}
+				{error && <p className="loading">Error!</p>}
 			</div>
 			<div ref={loader} />
 		</div>

@@ -111,7 +111,7 @@
   --color-pokemon-flying: #7a9ff2;
   --color-pokemon-water: #3a8be9;
   --color-pokemon-ice: #3a8be9;
-  --color-pokemon-unknown: #255147;
+  --color-pokemon-unknown: #fafafa;
   --color-pokemon-grass: #4fb443;
   --color-pokemon-bug: #889e2a;
   --color-pokemon-normal: #afa485;
@@ -131,7 +131,7 @@
   --color-bg-pokemon-flying: #cbdeff;
   --color-bg-pokemon-water: #afd9ff;
   --color-bg-pokemon-ice: #afd9ff;
-  --color-bg-pokemon-unknown: #255147;
+  --color-bg-pokemon-unknown: #fafafa;
   --color-bg-pokemon-grass: #b5eaaf;
   --color-bg-pokemon-bug: #d4dfa7;
   --color-bg-pokemon-normal: #e4e0cf;
@@ -389,6 +389,11 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #666; 
+}
+
+.loading{
+  padding: var(--spacing-2);
+  text-align: center;
 }
 
 /* Page Home */

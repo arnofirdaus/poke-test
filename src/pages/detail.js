@@ -18,7 +18,7 @@ function Detail(props) {
 	return(
 		<div className={`page-detail bg-light bg-light--${types[0]?.type.name}`}>
 			{
-				loading ? <p className="color--white">Loading...</p> :
+				loading ? <p className="loading">Loading...</p> :
 					<>
 					<div className="page-detail__header">
 						<div className="header-button" onClick={goBack}>

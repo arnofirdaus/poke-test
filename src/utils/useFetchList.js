@@ -7,8 +7,10 @@ const url = 'https://beta.pokeapi.co/graphql/v1beta'
 const useStore = create(set => ({
   list: [],
 	total: 0,
+	page: 0,
   setList: (data) => set(state => ({ list: [ ...state.list, ...data ] })),
   setTotal: (data) => set(() => ({ total: data})),
+	setPage: (data) => set(() => ({ page: data}))
 }))
 
 function useFetchList(page) {
@@ -16,9 +18,10 @@ function useFetchList(page) {
 	const [error, setError] = useState(false)
   const setList = useStore(state => state.setList)
   const setTotal = useStore(state => state.setTotal)
+  const setPage = useStore(state => state.setPage)
+  const pagetemp = useStore(state => state.page)
   const list = useStore(state => state.list)
   const total = useStore(state => state.total)
-
 
 	const fetchData = useCallback(async () => {
 		try {
@@ -48,12 +51,15 @@ function useFetchList(page) {
 				}`
 			}
 
-			const res = await axios.post(
-				url, data
-			)
-
-			await setList(res.data.data.species)
-			await setTotal(res.data.data.species_aggregate.aggregate.count)
+			if(pagetemp != page){
+				const res = await axios.post(
+					url, data
+				)
+	
+				await setPage(page)
+				await setList(res.data.data.species)
+				await setTotal(res.data.data.species_aggregate.aggregate.count)
+			}
 
 			setLoading(false)
 		} catch (err) {

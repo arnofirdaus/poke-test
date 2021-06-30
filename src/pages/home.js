@@ -17,8 +17,6 @@ function Home() {
 
 	const handleObserver = useCallback((entries) => {
 		const target = entries[0]
-
-		console.log(target.isIntersecting)
 		if (target.isIntersecting) {
 			setPage()
 		}

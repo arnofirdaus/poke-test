@@ -1,0 +1,28 @@
+.statbar {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: var(--spacing-4);
+}
+
+.statbar__bar {
+	position: relative;
+	background-color: var(--color-grey-400);
+	width: 100%;
+}
+
+.statbar__label {
+	flex: 1;
+	text-transform: capitalize;
+}
+
+.statbar__bar, .statbar__bar__value {
+	height: var(--spacing-2);
+	border-radius: var(--border-radius-lg);
+}
+
+.statbar__bar__value {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--color-blue-600);
+}

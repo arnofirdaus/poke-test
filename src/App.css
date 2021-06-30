@@ -366,6 +366,10 @@ html {
   background-color: var(--color-pokemon-poison);
 }
 
+.color--white{
+  color: var(--color-white);
+}
+
 /* custom scroll */
 /* width */
 ::-webkit-scrollbar {
@@ -452,9 +456,13 @@ html {
   padding: var(--spacing-3) var(--spacing-4);
 }
 
+.page-detail__img{
+  position: relative;
+}
+
 .page-detail__img img{
   margin: auto;
-  width: 250px;
+  max-width: 64%;
 }
 
 .page-detail__subtitle{
@@ -465,6 +473,9 @@ html {
 .page-detail__type{
   display: flex;
   padding: 0 var(--spacing-4);
+  position: absolute;
+  left: 0;
+  bottom: 12px;
 }
 
 .page-detail__panel{
@@ -476,7 +487,7 @@ html {
   width: 100%;
   max-width: var(--screen-sm);
   height: calc(100vh - var(--top));
-  padding-top: 50%;
+  padding-top: 65%;
   overflow-y: scroll;
 }
 

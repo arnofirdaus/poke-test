@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Home from "./pages/home";
 import Detail from "./pages/detail";
+import { Offline } from 'react-detect-offline'
 
 function App() {
   return (
@@ -15,6 +16,11 @@ function App() {
         <Route exact path='/' component={Home}></Route>
         <Route exact path='/pokemon/:name' component={Detail}></Route>
       </Switch>
+      <Offline>
+        <div className="page">
+          <div className="offline-info">Anda sedang offline</div>
+        </div>
+      </Offline>
     </Router>
   );
 }

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/poke-test/static/css/main.3fa9772e.chunk.css",
+    "main.js": "/poke-test/static/js/main.5f4feb59.chunk.js",
+    "main.js.map": "/poke-test/static/js/main.5f4feb59.chunk.js.map",
+    "runtime-main.js": "/poke-test/static/js/runtime-main.66a2fb87.js",
+    "runtime-main.js.map": "/poke-test/static/js/runtime-main.66a2fb87.js.map",
+    "static/js/2.8c47eb41.chunk.js": "/poke-test/static/js/2.8c47eb41.chunk.js",
+    "static/js/2.8c47eb41.chunk.js.map": "/poke-test/static/js/2.8c47eb41.chunk.js.map",
+    "static/js/3.bb503364.chunk.js": "/poke-test/static/js/3.bb503364.chunk.js",
+    "static/js/3.bb503364.chunk.js.map": "/poke-test/static/js/3.bb503364.chunk.js.map",
+    "index.html": "/poke-test/index.html",
+    "service-worker.js": "/poke-test/service-worker.js",
+    "service-worker.js.map": "/poke-test/service-worker.js.map",
+    "static/css/main.3fa9772e.chunk.css.map": "/poke-test/static/css/main.3fa9772e.chunk.css.map",
+    "static/js/2.8c47eb41.chunk.js.LICENSE.txt": "/poke-test/static/js/2.8c47eb41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66a2fb87.js",
+    "static/js/2.8c47eb41.chunk.js",
+    "static/css/main.3fa9772e.chunk.css",
+    "static/js/main.5f4feb59.chunk.js"
+  ]
+}

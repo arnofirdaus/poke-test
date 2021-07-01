@@ -2,6 +2,7 @@ import React from 'react'
 import PokeType from '../pokeType/pokeType'
 import { Link } from 'react-router-dom'
 import './style.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function PokeCard({id, name, types = []}) {
 	const baseUrlAssets = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork'
@@ -9,8 +10,8 @@ function PokeCard({id, name, types = []}) {
 	return (
 		<div className="grid-item">
 			<Link to={"/pokemon/" + name}>
-				<article className={`pokemon-box bg-light bg-light--${types[0].type.name}`}>
-					<img
+				<div className={`pokemon-box bg-light bg-light--${types[0].type.name}`}>
+					<LazyLoadImage
 						className="pokemon-box__img"
 						src={baseUrlAssets + "/" +id+ ".png"}
 						alt={name}
@@ -18,13 +19,12 @@ function PokeCard({id, name, types = []}) {
 						height="82px" />
 					<p className="pokemon-box__number">#{id}</p>
 					<h2 className="pokemon-box__name">{name}</h2>
-					<figure className="pokemon-box__types">
-						<figcaption className="visually-hidden">Types</figcaption>
+					<div className="pokemon-box__types">
 						<div className="pokemon-types">
 							{ types.map((d, i) => <PokeType key={i} type={d.type.name}/> ) }
 						</div>
-					</figure>
-				</article>
+					</div>
+				</div>
 			</Link>
 		</div>
 	)
